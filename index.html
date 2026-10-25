@@ -1,0 +1,183 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Flooi — Tecnologia para o dia a dia</title>
+<meta name="description" content="A Flooi desenvolve soluções tecnológicas práticas, acessíveis e fáceis de usar para simplificar o dia a dia de pequenas e médias empresas.">
+<meta property="og:title" content="Flooi — Tecnologia para o dia a dia">
+<meta property="og:description" content="Soluções práticas, acessíveis e fáceis de usar para pequenas e médias empresas.">
+<meta name="theme-color" content="#12171F">
+<link rel="icon" type="image/svg+xml" href="/favicon.svg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Nunito:wght@800;900&family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,700&display=swap" rel="stylesheet">
+<style>
+:root{--ink:#12171F;--blue:#0B5FFF;--fog:#F4F6F9;--line:#E1E6ED;--muted:#4A5563;--edu:#38B6FF;--loja:#FFB020}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:#FFFFFF;color:var(--ink);font-family:'DM Sans',system-ui,sans-serif;font-size:18px;line-height:1.6;-webkit-font-smoothing:antialiased}
+a{color:inherit}
+.wrap{max-width:1180px;margin:0 auto;padding:0 24px}
+.fl{fill:none;stroke-linecap:round;stroke-linejoin:round}
+.a{stroke-width:63}.b{stroke-width:57}.c{stroke-width:68}
+header{position:sticky;top:0;z-index:10;background:rgba(255,255,255,.88);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);border-bottom:1px solid transparent;transition:border-color .2s}
+header.scrolled{border-color:var(--line)}
+.nav{display:flex;align-items:center;justify-content:space-between;height:76px}
+.nav nav{display:flex;gap:32px;align-items:center;font-size:16px;font-weight:500}
+.nav nav a{text-decoration:none;color:#2B333E}
+.nav nav a:hover{color:var(--blue)}
+.btn{display:inline-flex;align-items:center;gap:10px;text-decoration:none;background:var(--ink);color:#fff!important;border-radius:999px;padding:14px 26px;font-weight:700;font-size:16px;transition:background .2s,transform .2s}
+.btn:hover{background:var(--blue);transform:translateY(-1px)}
+.hero{padding:96px 0 112px}
+.hero .wrap{display:grid;grid-template-columns:1.15fr 1fr;gap:56px;align-items:center}
+.eyebrow{display:inline-flex;align-items:center;gap:10px;font-size:14px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--muted)}
+.dot{width:12px;height:12px;border-radius:50%;background:var(--blue);display:inline-block;flex-shrink:0}
+h1,h2,h3{font-family:'Nunito',sans-serif;font-weight:900;letter-spacing:-.02em;margin:0}
+h1{font-size:clamp(44px,6.4vw,84px);line-height:1;margin:22px 0 26px}
+h1 .p{color:var(--blue)}
+.lead{font-size:clamp(18px,1.6vw,21px);color:var(--muted);max-width:540px;margin:0 0 36px}
+.icons{position:relative;height:440px}
+.icons svg{position:absolute;filter:drop-shadow(0 24px 40px rgba(18,23,31,.18))}
+.i1{width:58%;left:6%;top:0}
+.i2{width:40%;right:0;top:34%}
+.i3{width:36%;left:24%;bottom:0}
+section{padding:104px 0}
+.about{background:var(--fog)}
+.about .wrap{display:grid;grid-template-columns:1fr 1.2fr;gap:64px;align-items:start}
+h2{font-size:clamp(36px,4.4vw,56px);line-height:1.04}
+.about p{margin:0 0 20px;color:#2B333E}
+.pillars{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px;margin-top:36px}
+.pillar{background:#fff;border:1px solid var(--line);border-radius:20px;padding:22px}
+.pillar strong{display:block;font-family:'Nunito',sans-serif;font-weight:900;font-size:21px;margin-bottom:6px}
+.pillar span{font-size:15px;color:var(--muted);line-height:1.5;display:block}
+.products-head{display:flex;justify-content:space-between;align-items:end;gap:32px;margin-bottom:48px;flex-wrap:wrap}
+.products-head p{max-width:460px;margin:0;color:var(--muted)}
+.cards{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:24px}
+.card{border:1px solid var(--line);border-radius:28px;padding:44px 40px;display:flex;flex-direction:column;gap:28px;transition:transform .25s,box-shadow .25s;background:#fff}
+.card:hover{transform:translateY(-4px);box-shadow:0 24px 48px rgba(18,23,31,.08)}
+.card .lockup{height:64px;width:auto;max-width:100%}
+.card h3{font-size:28px;line-height:1.15}
+.card p{margin:0;color:var(--muted)}
+.tag{align-self:flex-start;font-size:13px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;border-radius:999px;padding:7px 14px}
+.tag.edu{background:#E0F3FF;color:#0B4F80}
+.tag.loja{background:#FFF3D9;color:#7A4D00}
+.closing{background:var(--ink);color:#fff;text-align:center;padding:120px 0}
+.closing h2{font-size:clamp(40px,6vw,76px)}
+.closing h2 .p{color:#2E74FF}
+.closing p{color:#A3ADBB;margin:24px auto 0;max-width:560px}
+footer{background:var(--ink);color:#A3ADBB;border-top:1px solid #222A35;font-size:15px}
+footer .wrap{display:flex;justify-content:space-between;align-items:center;gap:24px;padding-top:32px;padding-bottom:32px;flex-wrap:wrap}
+@media (max-width:900px){
+  .hero{padding:56px 0 72px}
+  .hero .wrap,.about .wrap{grid-template-columns:1fr;gap:40px}
+  .icons{height:340px;max-width:420px}
+  .cards{grid-template-columns:1fr}
+  .pillars{grid-template-columns:1fr}
+  section{padding:72px 0}
+}
+@media (max-width:620px){
+  .nav nav a:not(.btn){display:none}
+  .card{padding:32px 26px}
+  .card .lockup{height:48px}
+  .btn{padding:12px 20px}
+}
+@media (prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto!important}}
+</style>
+</head>
+<body>
+<header id="top">
+  <div class="wrap nav">
+    <a href="#top" aria-label="Flooi — início">
+      <svg viewBox="0 0 954 345" width="96" height="35" aria-hidden="true"><g class="fl" stroke="#12171F"><path class="a" d="M69.5 313.5V127A51.5 51.5 0 0 1 121 75.5H142.5"/><path class="b" d="M28.5 168.5H143.5"/><path class="c" d="M242 34V265A46 46 0 0 0 288 311"/><ellipse class="b" cx="449" cy="223.5" rx="100.5" ry="95"/><ellipse class="b" cx="722" cy="223.5" rx="100.5" ry="95"/><path class="c" d="M920 137V311"/></g><circle cx="920" cy="55" r="34" fill="#0B5FFF"/></svg>
+    </a>
+    <nav aria-label="Principal">
+      <a href="#sobre">Sobre</a>
+      <a href="#produtos">Produtos</a>
+      <a class="btn" href="#produtos">Conheça</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <section class="hero" aria-labelledby="hero-title">
+    <div class="wrap">
+      <div>
+        <span class="eyebrow"><span class="dot"></span>Flooi</span>
+        <h1 id="hero-title">Tecnologia para o dia a dia<span class="p">.</span></h1>
+        <p class="lead">Soluções práticas, acessíveis e fáceis de usar para simplificar o dia a dia de pequenas e médias empresas.</p>
+        <a class="btn" href="#produtos">Conheça nossos produtos
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+        </a>
+      </div>
+      <div class="icons" aria-hidden="true">
+        <svg class="i1" viewBox="0 0 256 256"><rect width="256" height="256" rx="58" fill="#12171F"/><g transform="translate(71.5 11.7) scale(0.598)"><g class="fl" stroke="#FFFFFF"><path class="a" d="M69.5 313.5V127A51.5 51.5 0 0 1 121 75.5H142.5"/><path class="b" d="M28.5 168.5H143.5"/></g><circle cx="155" cy="311" r="34" fill="#2E74FF"/></g></svg>
+        <svg class="i2" viewBox="0 0 256 256"><rect width="256" height="256" rx="58" fill="#FFFFFF" stroke="#E1E6ED" stroke-width="2"/><g transform="translate(71.5 11.7) scale(0.598)"><g class="fl" stroke="#12171F"><path class="a" d="M69.5 313.5V127A51.5 51.5 0 0 1 121 75.5H142.5"/><path class="b" d="M28.5 168.5H143.5"/></g><circle cx="155" cy="311" r="34" fill="#38B6FF"/></g></svg>
+        <svg class="i3" viewBox="0 0 256 256"><rect width="256" height="256" rx="58" fill="#FFFFFF" stroke="#E1E6ED" stroke-width="2"/><g transform="translate(71.5 11.7) scale(0.598)"><g class="fl" stroke="#12171F"><path class="a" d="M69.5 313.5V127A51.5 51.5 0 0 1 121 75.5H142.5"/><path class="b" d="M28.5 168.5H143.5"/></g><circle cx="155" cy="311" r="34" fill="#FFB020"/></g></svg>
+      </div>
+    </div>
+  </section>
+
+  <section class="about" id="sobre" aria-labelledby="sobre-title">
+    <div class="wrap">
+      <div>
+        <span class="eyebrow"><span class="dot"></span>Sobre a Flooi</span>
+        <h2 id="sobre-title" style="margin-top:18px">A tecnologia não precisa ser complicada para fazer a diferença.</h2>
+      </div>
+      <div>
+        <p>A Flooi é uma empresa de tecnologia fundada por Mateus Nogueira, com o propósito de simplificar o dia a dia de pequenas e médias empresas por meio de soluções tecnológicas práticas, acessíveis e fáceis de usar.</p>
+        <p>Desenvolvemos soluções que ajudam empresas a organizar suas operações, otimizar processos e trabalhar melhor — para crescer com mais praticidade e eficiência.</p>
+        <div class="pillars">
+          <div class="pillar"><strong>Práticas</strong><span>Feitas para resolver o que importa na rotina.</span></div>
+          <div class="pillar"><strong>Acessíveis</strong><span>Pensadas para a realidade de pequenas e médias empresas.</span></div>
+          <div class="pillar"><strong>Fáceis de usar</strong><span>Sem complicação, do primeiro acesso ao dia a dia.</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="produtos" aria-labelledby="produtos-title">
+    <div class="wrap">
+      <div class="products-head">
+        <div>
+          <span class="eyebrow"><span class="dot"></span>Produtos</span>
+          <h2 id="produtos-title" style="margin-top:18px">Nossos primeiros produtos.</h2>
+        </div>
+        <p>Soluções pensadas para as necessidades de cada área, para tornar a gestão mais simples e eficiente.</p>
+      </div>
+      <div class="cards">
+        <article class="card">
+          <svg class="lockup" viewBox="0 0 1837 446" role="img" aria-label="loja.flooi"><g class="fl" stroke="#12171F"><path class="c" d="M34 34V265A46 46 0 0 0 80 311"/><ellipse class="b" cx="241" cy="223.5" rx="100.5" ry="95"/><path class="c" d="M437 137V366A46 46 0 0 1 391 412"/><ellipse class="b" cx="633" cy="223.5" rx="100.5" ry="95"/><path class="c" d="M729 137V311"/></g><circle cx="437" cy="55" r="34" fill="#12171F"/><circle cx="821" cy="311" r="34" fill="#FFB020"/><g transform="translate(883 0)"><g class="fl" stroke="#7C8796"><path class="a" d="M69.5 313.5V127A51.5 51.5 0 0 1 121 75.5H142.5"/><path class="b" d="M28.5 168.5H143.5"/><path class="c" d="M242 34V265A46 46 0 0 0 288 311"/><ellipse class="b" cx="449" cy="223.5" rx="100.5" ry="95"/><ellipse class="b" cx="722" cy="223.5" rx="100.5" ry="95"/><path class="c" d="M920 137V311"/></g><circle cx="920" cy="55" r="34" fill="#7C8796"/></g></svg>
+          <span class="tag loja">Comércio</span>
+          <h3>Loja Flooi</h3>
+          <p>Tecnologia para simplificar a gestão do comércio.</p>
+        </article>
+        <article class="card">
+          <svg class="lockup" viewBox="0 0 1903 446" role="img" aria-label="edu.flooi"><g class="fl" stroke="#12171F"><path class="b" d="M28.5 223.5H229.5A100.5 95 0 1 0 200.06 290.68"/><ellipse class="b" cx="407" cy="223.5" rx="100.5" ry="95"/><path class="c" d="M503 34V311"/><path class="c" d="M604 137V223.5A95.5 87.5 0 0 0 795 223.5"/><path class="c" d="M795 137V311"/></g><circle cx="887" cy="311" r="34" fill="#38B6FF"/><g transform="translate(949 0)"><g class="fl" stroke="#7C8796"><path class="a" d="M69.5 313.5V127A51.5 51.5 0 0 1 121 75.5H142.5"/><path class="b" d="M28.5 168.5H143.5"/><path class="c" d="M242 34V265A46 46 0 0 0 288 311"/><ellipse class="b" cx="449" cy="223.5" rx="100.5" ry="95"/><ellipse class="b" cx="722" cy="223.5" rx="100.5" ry="95"/><path class="c" d="M920 137V311"/></g><circle cx="920" cy="55" r="34" fill="#7C8796"/></g></svg>
+          <span class="tag edu">Educação</span>
+          <h3>Edu Flooi</h3>
+          <p>Tecnologia para facilitar a gestão educacional.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="closing" aria-labelledby="fecho-title">
+    <div class="wrap">
+      <h2 id="fecho-title">Flooi<span class="p">.</span> Tecnologia para o dia a dia<span class="p">.</span></h2>
+      <p>Organizar, otimizar e trabalhar melhor — com tecnologia que cabe na rotina da sua empresa.</p>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <svg viewBox="0 0 954 345" width="80" height="29" role="img" aria-label="flooi"><g class="fl" stroke="#FFFFFF"><path class="a" d="M69.5 313.5V127A51.5 51.5 0 0 1 121 75.5H142.5"/><path class="b" d="M28.5 168.5H143.5"/><path class="c" d="M242 34V265A46 46 0 0 0 288 311"/><ellipse class="b" cx="449" cy="223.5" rx="100.5" ry="95"/><ellipse class="b" cx="722" cy="223.5" rx="100.5" ry="95"/><path class="c" d="M920 137V311"/></g><circle cx="920" cy="55" r="34" fill="#2E74FF"/></svg>
+    <span>© 2026 Flooi · tecnologia para o dia a dia</span>
+  </div>
+</footer>
+<script>
+  (function(){var h=document.querySelector('header');function f(){h.classList.toggle('scrolled',window.scrollY>8)}window.addEventListener('scroll',f,{passive:true});f();})();
+</script>
+</body>
+</html>
