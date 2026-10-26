@@ -29,12 +29,13 @@ header.scrolled{border-color:var(--line)}
 .nav nav a:hover{color:var(--blue)}
 .btn{display:inline-flex;align-items:center;gap:10px;text-decoration:none;background:var(--ink);color:#fff!important;border-radius:999px;padding:14px 26px;font-weight:500;font-size:16px;transition:background .2s,transform .2s}
 .btn:hover{background:var(--blue);transform:translateY(-1px)}
-.hero{padding:96px 0 112px}
-.hero .wrap{display:grid;grid-template-columns:1.15fr 1fr;gap:56px;align-items:center}
+.hero{padding:72px 0 96px}
+.hero .top{display:grid;grid-template-columns:1.15fr 1fr;gap:56px;align-items:center}
+.hero .cards{margin-top:80px}
 h1,h2,h3{font-family:'Nunito',sans-serif;font-weight:550;letter-spacing:-.01em;margin:0}
 h1{font-size:clamp(44px,6.4vw,84px);line-height:1.02;margin:0 0 26px}
 h1 .p{color:var(--blue)}
-.lead{font-size:clamp(18px,1.6vw,21px);color:var(--muted);max-width:560px;margin:0 0 36px}
+.lead{font-size:clamp(18px,1.6vw,21px);color:var(--muted);max-width:560px;margin:0}
 .bubbles{position:relative;height:440px}
 .bub{position:absolute;display:flex;align-items:center;gap:14px;background:#fff;border:1px solid var(--line);border-radius:22px;padding:14px 20px 14px 14px;box-shadow:0 18px 40px rgba(18,23,31,.08);white-space:nowrap;animation:float 6s ease-in-out infinite}
 .bub strong{display:block;font-weight:500;font-size:16px;line-height:1.3}
@@ -51,9 +52,7 @@ h1 .p{color:var(--blue)}
 .b5{left:0;top:83%;border-bottom-left-radius:6px;animation-delay:-4.8s}
 @keyframes float{0%,100%{transform:translateY(0)}50%{transform:translateY(-8px)}}
 section{padding:104px 0}
-#produtos{background:var(--fog)}
 h2{font-size:clamp(36px,4.4vw,56px);line-height:1.04}
-.products-head{margin-bottom:40px}
 .cards{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:24px}
 .card{border:1px solid var(--line);border-radius:28px;padding:40px 34px;display:flex;flex-direction:column;gap:28px;transition:transform .25s,box-shadow .25s;background:#fff}
 .card:hover{transform:translateY(-4px);box-shadow:0 24px 48px rgba(18,23,31,.08)}
@@ -68,7 +67,9 @@ footer{background:#fff;color:var(--muted);border-top:1px solid var(--line);font-
 footer .wrap{display:flex;justify-content:space-between;align-items:center;gap:24px;padding-top:32px;padding-bottom:32px;flex-wrap:wrap}
 @media (max-width:900px){
   .hero{padding:56px 0 72px}
-  .hero .wrap{grid-template-columns:1fr;gap:40px}
+  .hero .top{grid-template-columns:1fr;gap:36px}
+  .hero .cards{margin-top:48px}
+  .b4{display:none}
   .bubbles{height:auto;display:flex;flex-direction:column;gap:14px}
   .bub{position:static;align-self:flex-start;white-space:normal}
   .b2,.b4{align-self:flex-end}
@@ -107,12 +108,10 @@ footer .wrap{display:flex;justify-content:space-between;align-items:center;gap:2
 <main>
   <section class="hero" aria-labelledby="hero-title">
     <div class="wrap">
+     <div class="top">
       <div>
         <h1 id="hero-title">Tecnologia para o dia a dia<span class="p">.</span></h1>
         <p class="lead">A flooi é uma empresa de tecnologia dedicada a simplificar o dia a dia das empresas por meio de soluções práticas, acessíveis e fáceis de usar, que otimizam processos e tornam a gestão mais eficiente.</p>
-        <a class="btn" href="#produtos">Conheça nossos produtos
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
-        </a>
       </div>
       <div class="bubbles" aria-hidden="true">
         <div class="bub b1 loja"><span class="ic"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 7h12l-1 13H7L6 7z"/><path d="M9 7a3 3 0 0 1 6 0"/></svg></span><span><strong>Venda registrada</strong><small>R$ 89,90 no Pix</small></span></div>
@@ -121,17 +120,8 @@ footer .wrap{display:flex;justify-content:space-between;align-items:center;gap:2
         <div class="bub b4 loja"><span class="ic"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 7.5L12 3l9 4.5v9L12 21l-9-4.5v-9z"/><path d="M3 7.5l9 4.5 9-4.5M12 12v9"/></svg></span><span><strong>Estoque atualizado</strong><small>Camiseta P · 24 unidades</small></span></div>
         <div class="bub b5 eng"><span class="ic"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg></span><span><strong>Etapa da obra concluída</strong><small>Fundação · 100%</small></span></div>
       </div>
-    </div>
-  </section>
-
-  <section id="produtos" aria-labelledby="produtos-title">
-    <div class="wrap">
-      <div class="products-head">
-        <div>
-          <h2 id="produtos-title">Nossos primeiros produtos.</h2>
-        </div>
-      </div>
-      <div class="cards" data-swipe>
+     </div>
+      <div class="cards" id="produtos" data-swipe>
         <article class="card">
           <svg class="lockup" viewBox="0 0 1837 446" role="img" aria-label="loja.flooi"><g class="fl" stroke="#12171F"><path class="c" d="M34 34V265A46 46 0 0 0 80 311"/><ellipse class="b" cx="241" cy="223.5" rx="100.5" ry="95"/><path class="c" d="M437 137V366A46 46 0 0 1 391 412"/><ellipse class="b" cx="633" cy="223.5" rx="100.5" ry="95"/><path class="c" d="M729 137V311"/></g><circle cx="437" cy="55" r="34" fill="#12171F"/><circle cx="821" cy="311" r="34" fill="#FFB020"/><g transform="translate(883 0)"><g class="fl" stroke="#7C8796"><path class="a" d="M69.5 313.5V127A51.5 51.5 0 0 1 121 75.5H142.5"/><path class="b" d="M28.5 168.5H143.5"/><path class="c" d="M242 34V265A46 46 0 0 0 288 311"/><ellipse class="b" cx="449" cy="223.5" rx="100.5" ry="95"/><ellipse class="b" cx="722" cy="223.5" rx="100.5" ry="95"/><path class="c" d="M920 137V311"/></g><circle cx="920" cy="55" r="34" fill="#7C8796"/></g></svg>
           <span class="tag loja">Comércio</span>
@@ -150,6 +140,7 @@ footer .wrap{display:flex;justify-content:space-between;align-items:center;gap:2
       </div>
     </div>
   </section>
+
 
 </main>
 
